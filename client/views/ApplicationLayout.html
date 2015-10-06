@@ -1,17 +1,46 @@
 <template name="ApplicationLayout">
-	<!-- NAVBAR HERE -->
-	<div class="navbar clearfix">
-	    <ul class="clearfix">
-	        <li><a href="/advising">ADVISING</a></li>
-	        <li><a href="/opportunities">OPPORTUNITIES</a></li>
-	        <li><a href="/orgs">ORGANIZATIONS</a></li>
-	    	<li><a href="/mcat">RESOURCES</a></li>
-	        <li><a href="/contribute">CONTRIBUTE</a></li>
-	        <li><a href="/about">ABOUT</a></li>
-	    </ul>
-	    <a href="#" id="pull">MENU</a>  
-	</div>
-	<div style="padding-top:60px">
-		{{> yield}}
-	</div>
+    <div class="navbar clearfix">
+        <ul class="clearfix">
+            <li><a href="/">home</a></li>
+            <li class="nav-dropdown"><a href="/about">about</a>
+							<ul>
+								<li><a href="affiliates">affiliates></a></li>
+							</ul>
+						</li>
+            <li class="nav-dropdown"><a href="/academics">academics</a>
+							<ul>
+								<li><a href="majors">majors</a></li>
+								<li><a href="professors">professors</a></li>
+								<li><a href="courses">courses</a></li>
+								<li><a href="peer">peer</a></li>
+							</ul>
+						</li>
+            <li class="nav-dropdown"><a href="/advising">advising</a>
+							<ul>
+								<li><a href="career">cal career</a></li>
+								<li><a href="depts">ucb departments></a></li>
+								<li><a href="other">other premed advising></a></li>
+							</ul>
+						</li>
+            <li class="nav-dropdown"><a href="/opportunities">opportunities</a>
+							<ul>
+								<li><a href="events">events</a></li>
+								<li><a href="positions">open positions</a></li>
+								<li><a href="clinical">clinical</a></li>
+								<li><a href="research">research</a></li>
+							</ul>
+						</li>
+            <li class="nav-dropdown"><a href="/orgs">organizations</a>
+							<ul>
+								<li><a href="decals">decals</a></li>
+							</ul>
+						</li>
+            <li><a href="/mcat">mcat</a></li>
+            <li><a href="/contribute">contribute</a></li>
+        </ul>
+        <a href="#" id="pull">menu</a>
+    </div>
+    <div class="content">
+        {{> yield}}
+    </div>
 </template>
